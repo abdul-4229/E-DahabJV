@@ -39,7 +39,7 @@ public class MenueFrame1 extends JFrame {
 	public MenueFrame1() {
 		setTitle("E-dahab Service");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 322);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -81,12 +81,17 @@ public class MenueFrame1 extends JFrame {
 		lblNewLabel_6.setBounds(122, 160, 145, 14);
 		contentPane.add(lblNewLabel_6);
 		
-		JButton btn1 = new JButton("OK");
+		JButton btn1 = new JButton("Send");
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MenueFrame1 frame = new MenueFrame1();
 				int userinput = Integer.parseInt(doorotxt.getText());
 				switch(userinput) {
+				case 0:
+					frame.dispose();
+					MenueFrame back = new MenueFrame();
+					back.setVisible(true);
+					break;
 				case 1:
 					frame.dispose();
 					XisaabtadaFrame xisaab = new XisaabtadaFrame();
@@ -123,13 +128,23 @@ public class MenueFrame1 extends JFrame {
 				}
 			}
 		});
-		btn1.setBounds(204, 227, 89, 23);
+		btn1.setBounds(191, 257, 89, 23);
 		contentPane.add(btn1);
 		
 		doorotxt = new JTextField();
-		doorotxt.setBounds(180, 196, 144, 20);
+		doorotxt.setBounds(164, 227, 144, 21);
 		contentPane.add(doorotxt);
 		doorotxt.setColumns(10);
+		
+		JLabel lblNewLabel_6_1_1 = new JLabel("0 Next");
+		lblNewLabel_6_1_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_6_1_1.setBounds(122, 202, 171, 14);
+		contentPane.add(lblNewLabel_6_1_1);
+		
+		JLabel lblNewLabel_6_1 = new JLabel("Press 0 for man");
+		lblNewLabel_6_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_6_1.setBounds(122, 185, 171, 14);
+		contentPane.add(lblNewLabel_6_1);
 	}
 
 }
