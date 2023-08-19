@@ -104,8 +104,31 @@ public class XisaabtadaFrame extends JFrame {
 					  HaraaFrame haraa = new HaraaFrame();
 					  haraa.setVisible(true);
 					break;
-					
-					
+				case 2:
+					  frame.dispose();
+					  WarbixinFrame war = new WarbixinFrame();
+					  war.setVisible(true);
+					break;
+				case 3:
+					  frame.dispose();
+					  PinFrame pin = new PinFrame();
+					  pin.setVisible(true);
+					break;
+				case 4:
+					  frame.dispose();
+					  BedelLuuqadFrame lan = new BedelLuuqadFrame();
+					  lan.setVisible(true);
+					break;
+				case 5:
+					  frame.dispose();
+					  LiiskaMagacyadaFrame name = new LiiskaMagacyadaFrame();
+					  name.setVisible(true);
+					break;
+				case 6:
+					  frame.dispose();
+					  DaryeelFrame wac = new DaryeelFrame();
+					  wac.setVisible(true);
+					break;	
 				default:
 					JOptionPane.showMessageDialog(null, "Invalid");
 				break;

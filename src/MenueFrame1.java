@@ -92,7 +92,31 @@ public class MenueFrame1 extends JFrame {
 					XisaabtadaFrame xisaab = new XisaabtadaFrame();
 					xisaab.setVisible(true);
 					break;
-					
+				case 2:
+					frame.dispose();
+					UwareejiFrame send = new UwareejiFrame();
+					send.setVisible(true);
+					break;
+				case 3:
+					frame.dispose();
+					KaarkahadalkaFrame hadal = new KaarkahadalkaFrame();
+					hadal.setVisible(true);
+					break;
+				case 4:
+					frame.dispose();
+					KuiibsoFrame ku = new KuiibsoFrame();
+					ku.setVisible(true);
+					break;
+				case 5:
+					frame.dispose();
+					LacagBixixdFrame BI = new LacagBixixdFrame();
+					BI.setVisible(true);
+					break;
+				case 6:
+					frame.dispose();
+					AkoonFrame Akoon = new AkoonFrame();
+					Akoon.setVisible(true);
+					break;
 					default:
 						JOptionPane.showMessageDialog(null, "Invalid");
 					break;
