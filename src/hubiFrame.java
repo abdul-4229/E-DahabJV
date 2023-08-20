@@ -14,9 +14,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class hubiFrame extends JFrame {
-
+	
 	private JPanel contentPane;
 	private JTextField textField;
+	main menu = new main();
+	LambarkaFrame men = new LambarkaFrame();
 
 	/**
 	 * Launch the application.
@@ -71,12 +73,6 @@ public class hubiFrame extends JFrame {
 		JButton btnSend = new JButton("SEND");
 		btnSend.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int userinput = Integer.parseInt(textField.getText());
-				switch (userinput) {
-				case 1234:
-					
-					break;
-				}
 			}
 		});
 		btnSend.setBounds(166, 175, 80, 32);

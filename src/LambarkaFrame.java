@@ -18,6 +18,7 @@ public class LambarkaFrame extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	main first = new main();
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -41,7 +42,7 @@ public class LambarkaFrame extends JFrame {
 	public LambarkaFrame() {
 		setTitle("Geli Lmabarka aad lacagta u dirir rabto");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 329);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -75,16 +76,16 @@ public class LambarkaFrame extends JFrame {
 		
 		JLabel lblNewLabel_6_1 = new JLabel("Press 0 for man");
 		lblNewLabel_6_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_6_1.setBounds(93, 165, 171, 14);
+		lblNewLabel_6_1.setBounds(83, 210, 171, 14);
 		contentPane.add(lblNewLabel_6_1);
 		
 		JLabel lblNewLabel_6_1_1 = new JLabel("0 Previous");
 		lblNewLabel_6_1_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_6_1_1.setBounds(93, 182, 171, 14);
+		lblNewLabel_6_1_1.setBounds(83, 227, 171, 14);
 		contentPane.add(lblNewLabel_6_1_1);
 		
 		JButton btnCancel = new JButton("CANCEL");
-		btnCancel.setBounds(115, 207, 95, 32);
+		btnCancel.setBounds(136, 247, 95, 32);
 		contentPane.add(btnCancel);
 		
 		JButton btnSend = new JButton("SEND");
@@ -93,38 +94,53 @@ public class LambarkaFrame extends JFrame {
 				LacaghadalFrame frame = new LacaghadalFrame();
 				String phone = (textField_1.getText());
 				String money = (textField_2.getText());
+				String pin = (textField.getText());
 				if (phone.isEmpty()&& money.isEmpty()) {
 					JOptionPane.showMessageDialog(null, "Fadlan Geli Lacagta Iyo Number ka");
 				}else if (phone.isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Fadlan Geli  Number ka");
+					JOptionPane.showMessageDialog(null, "Fadlan Geli Nambarka");
 				}else if (money.isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Fadlan Geli  Lacagta ka");
-				}else {
+					JOptionPane.showMessageDialog(null, "Fadlan Geli Lacagta");
+				}else if (pin.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "Fadlan Geli pink");
+				}
+				else {
 					double amount = Double.parseDouble(money);
 					if (amount > first.balance) {
 						JOptionPane.showMessageDialog(null, "Haraagaagu Kuma Filna" );
 						textField_1.setText("");
 						textField_2.setText("");
 					}else if(amount <= 0) {
-						JOptionPane.showMessageDialog(null, " Waan ku xunahay isticmaalkaagu waa qalad" );
+						JOptionPane.showMessageDialog(null, " Waan ku xunahay haraagagu ma ahan mid jira" );
 						textField_1.setText("");
 						textField_2.setText("");
-					}else {
+					}else if(pin == "1234") {
+						JOptionPane.showMessageDialog(null, " Fadlan pin-kaagu waa qalad" );
+						textField_1.setText("");
+						textField_2.setText("");
+					}
+					else {
 						double result = first.balance-amount;
-						frame.dispose();
-						HaraaFrame xisaab = new HaraaFrame();
-						xisaab.setVisible(true);
+						JOptionPane.showMessageDialog(null, "Waad Ku Guuleeyasaty in aad dirto"  + " Lacag Dhan $" + money + " aad u dirto numberka " + phone + " Haraagaagu waa " + result );
 						textField_1.setText("");
 						textField_2.setText("");
-						JOptionPane.showMessageDialog(null, "Waad Ku Guuleeyasaty in aad dirto"  + " Lacag Dhan $" + money + " aad u dirto numberka " + phone + " Haraagaagu waa " + result );
 					}
 					
 				}	
 				
 			}
 		});
-		btnSend.setBounds(219, 207, 67, 32);
+		btnSend.setBounds(240, 247, 67, 32);
 		contentPane.add(btnSend);
+		
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setBounds(83, 173, 224, 26);
+		contentPane.add(textField);
+		
+		JLabel lblNewLabel_1_1_1_1 = new JLabel("3. pin-kaaga");
+		lblNewLabel_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1_1_1_1.setBounds(80, 153, 145, 21);
+		contentPane.add(lblNewLabel_1_1_1_1);
 	}
-
 }
