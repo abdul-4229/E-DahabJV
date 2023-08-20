@@ -53,15 +53,15 @@ public class main {
 		JLabel subtitlelb = new JLabel("E-Dahab");
 		subtitlelb.setForeground(new Color(0, 128, 0));
 		subtitlelb.setFont(new Font("Trebuchet MS", Font.BOLD, 24));
-		subtitlelb.setBounds(160, 21, 118, 49);
+		subtitlelb.setBounds(173, 37, 118, 49);
 		frmEdahabServices.getContentPane().add(subtitlelb);
 		
 		txtcode = new JTextField();
-		txtcode.setBounds(141, 103, 147, 20);
+		txtcode.setBounds(146, 109, 147, 36);
 		frmEdahabServices.getContentPane().add(txtcode);
 		txtcode.setColumns(10);
 		
-		JButton sendbtn1 = new JButton("OK");
+		JButton sendbtn1 = new JButton("SEND");
 		sendbtn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String code;
@@ -81,11 +81,11 @@ public class main {
 				
 			}
 		});
-		sendbtn1.setBounds(173, 134, 89, 23);
+		sendbtn1.setBounds(173, 156, 89, 36);
 		frmEdahabServices.getContentPane().add(sendbtn1);
 		
 		JLabel lblNewLabel = new JLabel("Fadlan Gali Code Ka Aqoonsiga");
-		lblNewLabel.setBounds(160, 81, 107, 14);
+		lblNewLabel.setBounds(146, 81, 187, 17);
 		frmEdahabServices.getContentPane().add(lblNewLabel);
 	}
 }

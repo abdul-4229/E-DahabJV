@@ -55,11 +55,17 @@ public class HaraaFrame extends JFrame {
 		JButton sendbtn2 = new JButton("OK");
 		sendbtn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				HaraaFrame frame = new HaraaFrame();
 				int userpin = Integer.parseInt(pintxt.getText());
 				main main = new main();
 				if (userpin == main.pin) {
 					JOptionPane.showMessageDialog(null, "Haraagau waa $" + main.balance);
-				}else {
+				}else if (userpin == 0) {
+					frame.dispose();
+					XisaabtadaFrame frame1 = new XisaabtadaFrame();
+					frame1.setVisible(true);
+				}
+				else {
 					JOptionPane.showMessageDialog(null, "Wrong pin");
 				}
 				

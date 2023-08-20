@@ -111,9 +111,12 @@ public class LambarkaFrame extends JFrame {
 						textField_2.setText("");
 					}else {
 						double result = first.balance-amount;
-						JOptionPane.showMessageDialog(null, "Waad Ku Guuleeyasaty in aad dirto" + phone  +" Lacag Dhan $" + money + " Haraagaagu waa " + result );
+						frame.dispose();
+						HaraaFrame xisaab = new HaraaFrame();
+						xisaab.setVisible(true);
 						textField_1.setText("");
 						textField_2.setText("");
+						JOptionPane.showMessageDialog(null, "Waad Ku Guuleeyasaty in aad dirto"  + " Lacag Dhan $" + money + " aad u dirto numberka " + phone + " Haraagaagu waa " + result );
 					}
 					
 				}	

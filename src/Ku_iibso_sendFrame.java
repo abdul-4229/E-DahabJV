@@ -86,7 +86,7 @@ public class Ku_iibso_sendFrame extends JFrame {
 						textField_2.setText("");
 					}else {
 						double result = first.balance-amount;
-						JOptionPane.showMessageDialog(null, "Waad Ku Guuleeyasaty in aad dirto" + phone  +" Lacag Dhan $" + money + " Haraagaagu waa " + result );
+						JOptionPane.showMessageDialog(null, "Waad Ku iisatay" + " Lacag Dhan $" + money + " Haraagaagu waa " + result );
 						textField_1.setText("");
 						textField_2.setText("");
 					}

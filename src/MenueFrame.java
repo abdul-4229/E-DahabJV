@@ -62,11 +62,11 @@ public class MenueFrame extends JFrame {
 		contentPane.add(shillingtxtlb);
 		
 		select1txt = new JTextField();
-		select1txt.setBounds(166, 169, 141, 20);
+		select1txt.setBounds(173, 152, 141, 25);
 		contentPane.add(select1txt);
 		select1txt.setColumns(10);
 		
-		JButton btn3 = new JButton("OK");
+		JButton btn3 = new JButton("SEND");
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -88,7 +88,7 @@ public class MenueFrame extends JFrame {
 				}
 			}
 		});
-		btn3.setBounds(193, 205, 74, 23);
+		btn3.setBounds(207, 188, 74, 34);
 		contentPane.add(btn3);
 	}
 }
