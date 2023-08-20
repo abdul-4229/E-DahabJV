@@ -114,16 +114,22 @@ public class LambarkaFrame extends JFrame {
 						JOptionPane.showMessageDialog(null, " Waan ku xunahay haraagagu ma ahan mid jira" );
 						textField_1.setText("");
 						textField_2.setText("");
-					}else if(pin == "1234") {
-						JOptionPane.showMessageDialog(null, " Fadlan pin-kaagu waa qalad" );
-						textField_1.setText("");
-						textField_2.setText("");
+						textField.setText("");
+
 					}
 					else {
-						double result = first.balance-amount;
-						JOptionPane.showMessageDialog(null, "Waad Ku Guuleeyasaty in aad dirto"  + " Lacag Dhan $" + money + " aad u dirto numberka " + phone + " Haraagaagu waa " + result );
-						textField_1.setText("");
-						textField_2.setText("");
+						int userpin = Integer.parseInt(pin);
+						if(userpin == first.pin) {
+							double result = first.balance-amount;
+							JOptionPane.showMessageDialog(null, "Waad Ku Guuleeyasaty in aad dirto"  + " Lacag Dhan $" + money + " aad u dirto numberka " + phone + " Haraagaagu waa " + result );
+							textField_1.setText("");
+							textField_2.setText("");
+							textField.setText("");
+
+						}else {
+							JOptionPane.showMessageDialog(null, " Fadlan pin-kaagu waa qalad" );
+						}
+						
 					}
 					
 				}	
